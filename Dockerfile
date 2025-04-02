@@ -5,8 +5,8 @@ ARG IMAGE_VERSION
 RUN echo "Build argument IMAGE_VERSION: $IMAGE_VERSION"
 
 # You can make them available to the environment as well
-ENV IMAGE_VERSION_ENV=${IMAGE_VERSION}
-RUN echo "Env variable IMAGE_VERSION_ENV: $IMAGE_VERSION_ENV"
+ENV ABC=${IMAGE_VERSION}
+RUN echo "Env variable ABC: $ABC"
 
 
 
