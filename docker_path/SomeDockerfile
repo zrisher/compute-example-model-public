@@ -2,11 +2,13 @@ FROM python:3.8
 
 # IMAGE_VERSION will be passed by default, but other build args can be used too
 ARG IMAGE_VERSION
+ARG ABC
+
 RUN echo "Build argument IMAGE_VERSION: $IMAGE_VERSION"
 
 # You can make them available to the environment as well
-ENV ABC=${IMAGE_VERSION}
-RUN echo "Env variable ABC: $ABC"
+ENV SOME_VAR=${ABC}
+RUN echo "Env variable SOME_VAR: $SOME_VAR"
 
 COPY example.txt .
 
