@@ -1,8 +1,10 @@
-ARG MY_VAR="custom_value"
+
 
 
 FROM python:3.12
 # FROM alpine:latest
+
+ARG MY_VAR="custom_value"
 
 ENV MY_STRING1=${MY_VAR}
 ENV MY_STRING2="World"
