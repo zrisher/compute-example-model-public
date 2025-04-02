@@ -1,4 +1,5 @@
 ARG MY_VAR="custom_value"
+RUN echo "Value of MY_VAR: $MY_VAR"
 
 FROM python:3.12
 # FROM alpine:latest
