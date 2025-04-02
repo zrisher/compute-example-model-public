@@ -4,18 +4,18 @@
 FROM python:3.12
 # FROM alpine:latest
 
-ARG MY_VAR="custom_value"
+ARG IMAGE_VERSION="custom_value"
 
-ENV MY_STRING1=${MY_VAR}
+ENV MY_STRING1=${IMAGE_VERSION}
 ENV MY_STRING2="World"
 
-RUN echo "Value of MY_VAR: $MY_VAR"
+RUN echo "Value of MY_VAR: $IMAGE_VERSION"
 
 RUN echo "Echoing MY_STRING1: $MY_STRING1"
 RUN echo "Echoing MY_STRING2: $MY_STRING2"
 RUN echo "Echoing both: $MY_STRING1 $MY_STRING2"
 
-RUN echo "Echoing BUILD_TIME_VAR: $MY_VAR"
+RUN echo "Echoing BUILD_TIME_VAR: $IMAGE_VERSION"
 
 #WORKDIR /usr/local/app
 
