@@ -1,11 +1,13 @@
 ARG MY_VAR="custom_value"
-RUN echo "Value of MY_VAR: $MY_VAR"
+
 
 FROM python:3.12
 # FROM alpine:latest
 
 ENV MY_STRING1=${MY_VAR}
 ENV MY_STRING2="World"
+
+RUN echo "Value of MY_VAR: $MY_VAR"
 
 RUN echo "Echoing MY_STRING1: $MY_STRING1"
 RUN echo "Echoing MY_STRING2: $MY_STRING2"
