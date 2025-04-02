@@ -1,16 +1,16 @@
-ARG image_version
+ARG MY_VAR="custom_value"
 
 FROM python:3.12
 # FROM alpine:latest
 
-ENV MY_STRING1=${image_version}
+ENV MY_STRING1=${MY_VAR}
 ENV MY_STRING2="World"
 
 RUN echo "Echoing MY_STRING1: $MY_STRING1"
 RUN echo "Echoing MY_STRING2: $MY_STRING2"
 RUN echo "Echoing both: $MY_STRING1 $MY_STRING2"
 
-RUN echo "Echoing BUILD_TIME_VAR: $image_version"
+RUN echo "Echoing BUILD_TIME_VAR: $MY_VAR"
 
 #WORKDIR /usr/local/app
 
