@@ -8,7 +8,7 @@ RUN echo "Build argument IMAGE_VERSION: $IMAGE_VERSION"
 ENV ABC=${IMAGE_VERSION}
 RUN echo "Env variable ABC: $ABC"
 
-COPY example.txt
+COPY example.txt .
 
 #WORKDIR /usr/local/app
 
