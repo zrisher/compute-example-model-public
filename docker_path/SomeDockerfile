@@ -1,4 +1,5 @@
-FROM python:3.8
+FROM alpine:latest
+#FROM python:3.8
 
 # IMAGE_VERSION will be passed by default, but other build args can be used too
 ARG IMAGE_VERSION
