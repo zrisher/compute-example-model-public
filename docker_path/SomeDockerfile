@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.8
 
 # IMAGE_VERSION will be passed by default, but other build args can be used too
 ARG IMAGE_VERSION
@@ -8,7 +8,7 @@ RUN echo "Build argument IMAGE_VERSION: $IMAGE_VERSION"
 ENV ABC=${IMAGE_VERSION}
 RUN echo "Env variable ABC: $ABC"
 
-
+COPY example.txt
 
 #WORKDIR /usr/local/app
 
