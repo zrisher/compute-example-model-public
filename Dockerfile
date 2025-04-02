@@ -1,21 +1,14 @@
-
-
-
 FROM python:3.12
-# FROM alpine:latest
 
-ARG IMAGE_VERSION="custom_value"
+# IMAGE_VERSION will be passed by default, but other build args can be used too
+ARG IMAGE_VERSION
+RUN echo "Build argument IMAGE_VERSION: $IMAGE_VERSION"
 
-ENV MY_STRING1=${IMAGE_VERSION}
-ENV MY_STRING2="World"
+# You can make them available to the environment as well
+ENV IMAGE_VERSION_ENV=${IMAGE_VERSION}
+RUN echo "Env variable IMAGE_VERSION_ENV: $IMAGE_VERSION_ENV"
 
-RUN echo "Value of MY_VAR: $IMAGE_VERSION"
 
-RUN echo "Echoing MY_STRING1: $MY_STRING1"
-RUN echo "Echoing MY_STRING2: $MY_STRING2"
-RUN echo "Echoing both: $MY_STRING1 $MY_STRING2"
-
-RUN echo "Echoing BUILD_TIME_VAR: $IMAGE_VERSION"
 
 #WORKDIR /usr/local/app
 
